@@ -1,0 +1,14 @@
+<section>
+    <h5> Search </h5>
+    <input name="searchInput" [(ngModel)]="searchInput" type="text"  placeholder="Search for programming languages" size="50" >
+
+    <article>
+        <h6> Results </h6>
+        <ul>
+          <li *ngFor="let programmingLanguage of
+                        programmingLanguages | search: searchInput">
+             {{programmingLanguage}}
+          </li>
+        </ul>
+    </article>
+</section>
